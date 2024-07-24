@@ -19,8 +19,17 @@ The backend server will run on http://localhost:3000.
 ### Frontend Setup
 1.Navigate to the Frontend Directory
 cd frontend/escrowstack1
-2.Open index.html in a Browser
+
+2.Install Dependencies (If using npm to manage packages)
+If your project uses npm for managing frontend dependencies, you would typically have a package.json file. Run the following command to install dependencies:
+npm install
+
+3.Start the Frontend Application
+npm start 
+
+4.Open index.html in a Browser
 You can simply open index.html in a web browser to view the frontend application.
+
 
 ### API Endpoints
 The backend provides the following API endpoints:
