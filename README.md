@@ -9,8 +9,10 @@ EazyPayouts Mockup is a project consisting of a frontend application and a Node.
 
 1. Navigate to the Backend Directory
    cd backend
+   
 2.Install Dependencies
   npm install
+  
 3.Run the Backend Server
 
 node server.js
