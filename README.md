@@ -16,13 +16,13 @@ EazyPayouts Mockup is a project consisting of a frontend application and a Node.
 node server.js
 The backend server will run on http://localhost:3000.
 
-###Frontend Setup
+### Frontend Setup
 1.Navigate to the Frontend Directory
 cd frontend/escrowstack1
 2.Open index.html in a Browser
 You can simply open index.html in a web browser to view the frontend application.
 
-###API Endpoints
+### API Endpoints
 The backend provides the following API endpoints:
 
 1.Get Companies
