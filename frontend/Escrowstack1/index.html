@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <link rel="stylesheet" href="./global.css" />
+  <link rel="stylesheet" href="./index.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" />
+</head>
+<body>
+  <div class="easypayouts-load-screen">
+    <div class="side-nav">
+      <div class="logo-parent">
+        <div class="logo">
+          <img class="eazypayouts-2-1-icon" loading="lazy" alt="" src="./public/eazypayouts2-1.svg" />
+          <img class="group-icon" loading="lazy" alt="" src="./public/group.svg" />
+        </div>
+        <div class="navigation">
+          <div class="nav-links">
+            <img class="box-arrow-in-down-icon" loading="lazy" alt="" src="./public/boxarrowindown.svg" />
+            <a class="loads">Loads</a>
+          </div>
+          <div class="nav-links1">
+            <img class="journal-text-icon" alt="" src="./public/journaltext.svg" />
+            <input class="statements" placeholder="Statements" type="text" />
+          </div>
+          <div class="nav-links2">
+            <img class="arrow-down-up-icon" loading="lazy" alt="" src="./public/arrowdownup.svg" />
+            <div class="transactions">Transactions</div>
+          </div>
+        </div>
+      </div>
+      <div class="box-arrow-right-parent">
+        <img class="box-arrow-right-icon" loading="lazy" alt="" src="./public/boxarrowright.svg" />
+        <a class="logout">Logout</a>
+      </div>
+    </div>
+    <div class="line-parent">
+      <div class="frame-child"></div>
+      <div class="frame-item"></div>
+      <div class="frame-inner"></div>
+      <div class="line-div"></div>
+      <div class="frame-child1"></div>
+      <div class="frame-child2"></div>
+    </div>
+    <div class="separator"></div>
+    <main class="content">
+      <section class="account-info">
+        <div class="account-name-dropdown">
+          <div class="selectoutlined">
+            <div class="outlined">
+              <div class="inactive">
+                <select id="company-select" class="company-name">
+                  <option value="">Select Company</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="selectoutlined1">
+            <div class="outlined1">
+              <div class="inactive1">
+                <select id="account-select" class="account-name" disabled>
+                  <option value="">Select Account</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="balance-info" id="balance-info" hidden>
+          <label class="label">
+            <div class="balance-icon-container">
+              <img class="balance-icon" loading="lazy" alt="" src="./public/vector.svg" />
+            </div>
+            <div class="balance-label">
+              <div class="avaliable-balance-parent">
+                <h3 class="avaliable-balance">Available Balance</h3>
+                <div class="balance-amount" id="balance-amount">₹ 0</div>
+              </div>
+            </div>
+            <div class="cash-stack"></div>
+          </label>
+        </div>
+      </section>
+      <div class="transactions-header">
+        <div class="latest-loads-are">Latest Loads are displayed here</div>
+      </div>
+      <section class="table-data" id="table-data" hidden>
+        <div class="date">
+          <div class="date-parent">
+            <b class="date1">Date</b>
+            <div id="transaction-dates"></div>
+          </div>
+        </div>
+        <div class="credit">
+          <div class="credit-parent">
+            <a class="credit1">Credit</a>
+            <div id="transaction-credits"></div>
+          </div>
+        </div>
+        <div class="acc-balance">
+          <div class="ac-balance-parent">
+            <b class="ac-balance">A/c Balance</b>
+            <div id="transaction-balances"></div>
+          </div>
+        </div>
+        <div class="utr-rrn">
+          <div class="utrrrn-parent">
+            <b class="utrrrn">UTR/RRN</b>
+            <div id="transaction-utrs"></div>
+          </div>
+        </div>
+        <div class="acc-no-upi">
+          <div class="ac-no-upi-parent">
+            <b class="ac-no-upi">A/c No /UPI</b>
+            <div id="transaction-acnos"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
