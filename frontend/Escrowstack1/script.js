@@ -65,6 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
         try {
           const response = await fetch(`http://localhost:3000/api/accounts/${accountId}`);
           const account = await response.json();
+          console.log(response.json(),"response.json()");
           displayAccountInfo(account);
         } catch (error) {
           console.error('Error fetching account details:', error);
@@ -74,40 +75,50 @@ document.addEventListener('DOMContentLoaded', function () {
   
     function displayAccountInfo(account) {
       balanceAmount.textContent = `₹ ${account.balance}`;
+      balanceAmount.style.color = 'green';
       balanceInfo.hidden = false;
-  
-      // Clear previous transactions
+    
       transactionDates.innerHTML = '';
       transactionCredits.innerHTML = '';
       transactionBalances.innerHTML = '';
       transactionUtrs.innerHTML = '';
       transactionAcNos.innerHTML = '';
-  
+    
       account.transactions.forEach((transaction) => {
         const dateDiv = document.createElement('div');
-        dateDiv.textContent = transaction.date;
+        const date = new Date(transaction.date);
+        const formattedDate = date.toLocaleString('en-US', {
+          year: 'numeric',
+          month: '2-digit',
+          day: '2-digit',
+          hour: '2-digit',
+          minute: '2-digit',
+          hour12: true
+        });
+        dateDiv.textContent = formattedDate;
         transactionDates.appendChild(dateDiv);
-  
+    
         const creditDiv = document.createElement('div');
-        creditDiv.textContent = transaction.credit;
+        creditDiv.textContent = `₹ ${transaction.credit}`;
+        creditDiv.style.color = `green`;
         transactionCredits.appendChild(creditDiv);
-  
+    
         const balanceDiv = document.createElement('div');
-        balanceDiv.textContent = transaction.balance;
+        balanceDiv.textContent = `₹ ${transaction.balance}`;
         transactionBalances.appendChild(balanceDiv);
-  
+    
         const utrDiv = document.createElement('div');
         utrDiv.textContent = transaction.utr;
         transactionUtrs.appendChild(utrDiv);
-  
+    
         const acNoDiv = document.createElement('div');
         acNoDiv.textContent = transaction.acNo;
         transactionAcNos.appendChild(acNoDiv);
       });
-  
+    
       tableData.hidden = false;
     }
-  
+    
     fetchCompanies();
   });
   
